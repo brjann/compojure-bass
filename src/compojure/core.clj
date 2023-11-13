@@ -261,7 +261,7 @@
       (-> request
           (assoc-route-params (decode-route-params params))
           (assoc :path-info (if (= subpath "") "/" subpath)
-                 :context   (remove-suffix uri subpath))
+                 #_#_:context   (remove-suffix uri subpath))
           (update :compojure/route-context str route-context)))))
 
 (defn- context-route [route]
